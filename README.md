@@ -10,7 +10,7 @@ The question I set out to answer: **when you only look at hospital stays, do you
 
 **Short answer: yes, dramatically.**
 
-Using only inpatient (hospital) data, the model found that a patient's overall health burden (comorbidities like diabetes, heart failure, etc.) had no measurable effect on cost. That seemed wrong — health status should matter.
+Using only inpatient (hospital) data, the model found that a patient's overall health burden (comorbidities like diabetes, heart failure, etc.) had no measurable effect on cost. That seemed wrong health status should matter.
 
 Adding outpatient data (visits outside the hospital) fixed it: comorbidity burden became the single strongest predictor of cost in the model, and the model explained 3x more of what actually drives cost.
 
@@ -28,12 +28,6 @@ Adding outpatient data (visits outside the hospital) fixed it: comorbidity burde
 
 I used the [CMS Data Entrepreneurs' Synthetic Public Use File (DE-SynPUF)](https://www.cms.gov/) — a free, publicly available Medicare claims dataset that CMS built specifically so people could practice this kind of analysis. It has the real structure and coding of actual Medicare claims (real diagnosis codes, real claim types), but the patient-level numbers are synthetic, so no real patient's information is in this data.
 
-## What's in this repo
-
-- **`code/`** — the two Python scripts: one using only hospital claims, one using hospital + outpatient claims combined
-- **`data/`** — the resulting datasets each script produced
-- **`docs/`** — three write-ups: a methods paper for each version, plus a version formatted for journal submission
-
 ## How to run it yourself
 
 1. Download DE-SynPUF Sample 1 from cms.gov (free, no application needed) — you need the Beneficiary Summary, Inpatient Claims, and Outpatient Claims files
@@ -43,7 +37,7 @@ I used the [CMS Data Entrepreneurs' Synthetic Public Use File (DE-SynPUF)](https
 
 ## Tools used
 
-Python — pandas, numpy, statsmodels
+Python- pandas, numpy, statsmodels
 
 ## About me
 
@@ -51,5 +45,5 @@ Shruthi, MD, MHA -OSU DHA Student. Background in CMS Medicare Advantage regulato
 
 ## One important note
 
-This uses CMS's *synthetic* Medicare data — real file structure and coding, but not real patients. CMS itself says this data shouldn't be used to draw real-world conclusions about actual Medicare costs. This project is a demonstration of the analysis method, not a claim about real-world cancer costs.
+This uses CMS's *synthetic* Medicare data real file structure and coding, but not real patients. CMS itself says this data shouldn't be used to draw real-world conclusions about actual Medicare costs. This project is a demonstration of the analysis method, not a claim about real-world cancer costs.
 
